@@ -69,5 +69,19 @@ body {
     right: 0px;
     position: absolute;
     bottom: 0px;
-    z-index: 1;
+}
+
+.modal {
+    .modal-header {
+        background-color: $background-dark;
+        .close {
+            color: floralwhite;
+        }
+        .modal-title {
+            color: floralwhite;
+        }
+    }
+    .modal-body {
+        background-color: $background-pale;
+    }
 }

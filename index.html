@@ -33,7 +33,7 @@
                     <li class="nav-item"><a class="nav-link" href="./contactus.html"><span class="fa fa-address-card fa-lg"></span>Contact</a></li>
                 </ul>
                 <span class="navbar-text">
-                    <a data-toggle="modal" data-target="#loginModal"><span class="fa fa-sign-in"></span>Login</a>
+                    <a id="loginModalButton"><span class="fa fa-sign-in"></span>Login</a>
                 </span>
             </div>
         </div>
@@ -158,8 +158,7 @@
                     <img src="img/logo.png" class="img-fluid">
                 </div>
                 <div class="col-12 col-sm-3 align-self-center">
-                    <a class="btn btn-sm btn-warning btn-block" role="button" data-toggle="modal" data-target="#reserveModal">Reserve Table</a>
-
+                    <a id="reservModalButton" class="btn btn-sm btn-warning btn-block" role="button">Reserve Table</a>
                 </div>
             </div>
         </div>
@@ -203,7 +202,7 @@
                     </a>
                     <a class="carousel-control-next" href="#mycarousel" role="button" data-slide="next">
                         <span class="carousel-control-next-icon"></span>
-                    </a>>
+                    </a>
                     <button class="btn btn-danger btn-sm" id="carouselButton">
                             <span class="fa fa-pause"></span>
                         </button>
@@ -323,7 +322,12 @@
                     $("#carouselButton").children("span").addClass('fa-pause');
                 }
             });
-
+            $("#reservModalButton").click(function() {
+                $("#reserveModal").modal('show');
+            });
+            $("#loginModalButton").click(function() {
+                $("#loginModal").modal('show');
+            });
         });
     </script>
 </body>
